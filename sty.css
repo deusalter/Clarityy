@@ -49,39 +49,220 @@ li {
     font-style: italic;
     font-weight: 500;
 }
+
 /* attribute selectors */
 a[title] {
     text-decoration: none;
 }
+
 /* Pseudo class */
 .selectors>div>p:first-child {
     color: blue
 }
-.selectors>div>p:last-child{
-    color:aquamarine
+
+.selectors>div>p:last-child {
+    color: aquamarine
 }
-.selectors>div>p:nth-child(3){
-    color: red;
+
+.selectors>div>p:nth-child(3) {
+    color: hsl(40, 63%, 31%);
 }
-a:hover{
+
+a:hover {
     color: aqua;
 }
+
 /* Pseudo elements */
-.selectors>div>p::first-letter{
+.selectors>div>p::first-letter {
     background-color: brown;
 }
+
 /* .selectors>div>p::highlight(:read-only){
     color: yellow;
 } */
 /* combinators- descendant */
-div article p{
+div article p {
     color: aquamarine;
 }
+
 /* Child combinator */
-div>article>p{
+div>article>p {
     background-color: blanchedalmond;
 }
+
 /* next sibling combinator */
-h1 + p{
+h1+p {
     color: red;
+}
+
+.net::first-letter {
+    background-color: aqua;
+}
+
+.float-left {
+    height: 100px;
+    width: 100px;
+    /* float:left; */
+}
+
+.parent {
+    background-color: black;
+    width: 300px;
+    height: 300px;
+}
+
+#rect1 {
+    width: 100px;
+    height: 50px;
+    background: #3acf0d;
+    top: 10px;
+    left: 20px;
+    position: relative;
+    /* position: fixed; always on your screen from the top of the webpage */
+
+
+}
+
+#rect2 {
+    width: 50px;
+    height: 100px;
+    background-color: red;
+    top: 20px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    position: relative;
+}
+
+.container>div {
+    background-color: rgb(42, 212, 246);
+    border: 2px solid black;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(7, .2fr);
+    grid-template-rows: repeat(3, .3fr);
+    row-gap: 10px;
+    column-gap: 5em;
+}
+
+.cont>header,
+main,
+aside,
+footer {
+    background-color: maroon;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.cont {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+header {
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+main {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+aside {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+footer {
+    grid-column: 1/3;
+    grid-row: 3;
+    margin: 200px;
+}
+
+.corners {
+    background-color: #3acf0d;
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    color: white;
+    border-radius: 10px 25px 40px 155px;
+    border: 3px solid gold;
+}
+
+.circle {
+    background-color: antiquewhite;
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.crust {
+    background-color: rgb(235, 141, 59);
+    height: 120px;
+    width: 120px;
+    margin: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.pep {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    border-radius: 50%;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+}
+
+.pepe {
+    background-color: rgb(214, 122, 122);
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg {
+    /* background: url(images.png) repeat center fixed; */
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+}
+
+.grad {
+    height: 600px;
+    width: 600px;
+    margin: 20px;
+    background-image: conic-gradient(red, yellow, green, blue, maroon);
+}
+@keyframes deck {
+    0% {
+        background-color: red;
+    }
+
+    50% {
+        background-color: yellow;
+    }
+    100%{
+        background-color: #3acf0d;
+    }
+}
+.trans {
+    /* transform: rotateX(120deg); */
+    width: 60px;
+    height: 60px;
+    background: red;
+    animation-name: deck;
+    animation-duration: 20s;
 }
