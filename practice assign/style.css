@@ -1,0 +1,193 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: content-box;
+    background-color: rgb(250, 251, 252);
+}
+
+.grandparent1 {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border: 5px solid rgb(250, 250, 250);
+}
+
+header,
+main,
+footer {
+    width: 85%;
+    display: flex;
+    margin: 0px auto;
+
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+    height: 60px;
+
+}
+
+ul {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px auto;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+ul>div {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+}
+
+li {
+    list-style: none;
+    margin: 0px 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+li>a>img {
+    width: 40px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(17, 34, 17);
+    background-color: rgb(255, 255, 255);
+}
+
+.grandparent2 {
+    width: 100%;
+    height: 100%;
+}
+
+.grandparent2>main {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.grandparent2>main>.firstnavlink {
+    margin: 0px 2px;
+
+}
+
+.grandparent2>main>.firstnavlink>a:first-child,
+:nth-child(3) {
+    color: rgb(255, 134, 130);
+}
+
+.grandparent2>main>.firstnavlink>span {
+    color: black;
+    margin: 0px 6px;
+}
+
+.grandparent2>main>.secondtitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.grandparent2>main>.secondtitle>div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.grandparent2>main>.secondtitle>div>h1 {
+    color: rgb(18, 35, 18);
+}
+
+.grandparent2>main>.secondtitle>div>.stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.grandparent2>main>.secondtitle>div>.stars>p {
+    font-size: 15px;
+}
+
+.grandparent2>main>.secondtitle>div>.stars>p:last-child {
+    color: black;
+}
+
+.grandparent2>main>.thirdaddress {
+    margin: 4px 0px;
+    color: black;
+}
+
+.grandparent2>main>.fourthRating {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#btndisabledreviews {
+    color: rgb(27, 43, 27);
+    padding: 10px;
+    margin: 0px;
+    border: 2px solid rgb(142, 211, 188);
+    border-radius: 12%;
+}
+
+/* #scnddiv {
+    color: rgb(27, 43, 27);
+    padding: 10px;
+    margin: 0px;
+    border: 2px solid rgb(142, 211, 188);
+    border-radius: 12%;
+} */
+#booknowbtn {
+    background: rgb(142, 211, 188);
+    color: rgb(27, 43, 27);
+    padding: 10px;
+    margin: 0px;
+    border: 2px solid rgb(142, 211, 188);
+    border-radius: 7%;
+    font-weight: 700;
+}
+
+.photoGrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.largepic {
+    grid-row: span 2;
+}
+
+.largepic>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.smallpics {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    height: 100%;
+}
+
+.smallpics>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
