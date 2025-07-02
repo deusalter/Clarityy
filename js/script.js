@@ -99,6 +99,10 @@ let name = "Abhinav"
 let age = 18
 // template literals
 console.log(`${name} is of age ${age}`);
+console.log(' ${name}');
+console.log(" ${name}");
+console.log(`${name}`);
+
 
 // WAP to read text from the browser and print it
 // let str = prompt("enter any text to print");
@@ -129,23 +133,23 @@ console.log(`${name} is of age ${age}`);
 //! returns unicode value of the character you pass
 
 //WAP to join two strings
-let hello = "hello"
-let world = "world"
-console.log(hello.concat(world));
+// let hello = "hello"
+// let world = "world"
+// console.log(hello.concat(world));
 
 //WAP to check whether a string ends with a specified substring
-let question = "Hey did you do your homework?"
-console.log(question.endsWith("ork?"));
+// let question = "Hey did you do your homework?"
+// console.log(question.endsWith("ork?"));
 
 //WAP to check if a string includes any substring or character?
-console.log(question.includes("did"));
+// console.log(question.includes("did"));
 
 //WAP to cut a portion of the string 
-let substr = question.slice(0, 7);
-console.log(substr);
+// let substr = question.slice(0, 7);
+// console.log(substr);
 
-let substr2 = question.substring(0, 7)
-console.log(substr);
+// let substr2 = question.substring(0, 7)
+// console.log(substr);
 // Assignment find the difference b/w substring and slice
 
 
@@ -265,8 +269,8 @@ console.log(w >= z);//true
 console.log(w <= z);//true
 //come back to this after type coercion
 console.log("come back to this after type coercion");
-w=56
-z="56"
+w = 56
+z = "56"
 console.log(w == z);//true
 console.log(w != z);//false
 console.log(w === z);//false
@@ -305,18 +309,18 @@ console.log(-10 || -20);//-10
 
 // WAP to print 0 if the count of items is `empty`. 
 // If the count is non-zero display the count
-let count = 0
-count != 0 ? console.log(count) : console.log(!count);
+// let count = 0
+// count != 0 ? console.log(count) : console.log(!count);
 
-// Explicit type casting
-let fi = "1"
-console.log(typeof fi);
-console.log(typeof Number(fi));
+// // Explicit type casting
+// let fi = "1"
+// console.log(typeof fi);
+// console.log(typeof Number(fi));
 
-let l = "a"
-console.log(Number(l));//NaN
-let stry = "Abhinav"
-console.log(Number(stry));//NaN
+// let l = "a"
+// console.log(Number(l));//NaN
+// let stry = "Abhinav"
+// console.log(Number(stry));//NaN
 
 //WAP to take two numbers as input from the user and log the sum on the screen
 // console.log(Number(prompt("give num1"))+Number(prompt("give num1")));
@@ -325,5 +329,164 @@ console.log(Number(stry));//NaN
 // console.log(prompt("give st1")+prompt('give str2'));
 
 //WAP to input the age and check if they are eligible to drive 
-let age2 = Number(prompt("input age"));
-age2 >= 16 ? console.log("you can drive") : console.log("you can't drive just walk");
+// let age2 = Number(prompt("input age"));
+// age2 >= 16 ? console.log("you can drive") : console.log("you can't drive just walk");
+
+
+// WAP to find the largest number among two numbers 
+let num1 = 40
+
+let num2 = 90
+
+num1 > num2 ? console.log("num1 is greater") : console.log("num2 is greater")
+
+// WAP to find the largest number among three numbers 
+let num3 = 120
+//  (condition)?true part:false part
+let largest = (num1 > num2 && num1 > num3) ? num1 : (num2 > num3 ? num2 : num3)
+console.log(largest);
+
+
+// Conditional or Decision statements
+/*  1. ternary operator
+    2. if
+        syntax: if(condition) ---> this condition should result in a boolean value
+                {
+                    statements;
+                }
+    3. if else
+        syntax: if(condition) 
+                {
+                    statements;
+                }
+                else{
+                    statements;
+                }
+    4. else if ladder
+            syntax: if(condition) 
+                {
+                    statements;
+                }
+                else if (condition){
+                    statements;
+                }
+                else if (condition){
+                    statements;
+                }
+                else if (condition){
+                    statements;
+                }
+                else{
+                    statements;
+                }
+    5. Switch case
+    Switch(value)
+    {
+        Case value:
+                {
+                    Statements;
+                }
+        Case value:
+                {
+                    Statements;
+                }
+        Case value:
+                {
+                    Statements;
+                }
+        Case value:
+                {
+                    Statements;
+                }
+        default:
+                {
+                    Statements;
+                }
+    }
+
+
+*/
+// break is a control transfer statement compiler will end the exit the switch case immediately upon seeing the break statement
+// let num=1;
+// switch (num) {
+//     case 1:
+//         console.log(1);
+//         break;
+//     case 2:
+//         console.log(2);
+//         break;
+//     case 3:
+//         console.log(3);
+//         break;
+//     case 4:
+//         console.log(4);
+//         break;
+//     default:
+//         console.log("default");
+//         break;
+// }
+
+
+// if else example
+// let g=10
+// let h=20
+// if(++g){
+//     console.log(g);
+// }else if(++h){
+//     console.log(h);
+// }else{
+//     console.log(g);
+//     console.log(h);
+// }
+
+// WAP to read four numbers and log minimum number in the console
+// let n1 = prompt("enter num1")
+// let n2 = prompt("enter num2")
+// let n3 = prompt("enter num3")
+// let n4 = prompt("enter num4")
+// if (n1 < n2 && n1 < n3 && n1 < n4) {
+//     console.log(n1, "is the smallest");
+// } else if (n2 < n1 && n2 < n3 && n2 < n4) {
+//     console.log(n2, "is the smallest");
+// } else if (n3 < n1 && n3 < n2 && n3 < n4) {
+//     console.log(n3, "is the smallest");
+// } else {
+//     console.log(n4, "is the smallest");
+// }
+
+
+// Loops: also called as iterations - the process of executing either a statement or a block of statements repeadedly multiple times is known as looping
+// 4 types of loops
+/*
+1. while loop
+
+while (condition){
+    statements to be executed;
+}
+
+2. do-while loop - no of minimum iterations is one
+do{
+    statement;
+}while(condition)
+
+3. for loop
+for (initialization; condition check; updation){
+    statement;
+}
+
+*/
+
+// WAP to input a number from the user and print all the numbers until that number using loops
+let n5 = prompt("Enter a number");
+// 10
+let i=0
+// while(i<=n5){
+//     console.log(i);
+//     i+=1;
+// }
+// do{
+//     console.log(i);
+//     i++;
+// }while(i<=n5)
+
+
