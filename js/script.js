@@ -554,11 +554,15 @@ for (initialization; condition check; updation){
 
 //let and const keywords do not have access to window variables
 //only global varaibles have access to window object
-let abc="abc"
-const pi=3.142
-var ted="buddy"
-console.log(window.abc);
-console.log(window.pi);
-console.log(window.ted);
+// let abc="abc"
+// const pi=3.142
+// var ted="buddy"
+// console.log(window.abc);
+// console.log(window.pi);
+// console.log(window.ted);
+
+
+
+
 
 
