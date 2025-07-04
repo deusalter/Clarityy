@@ -477,9 +477,9 @@ for (initialization; condition check; updation){
 */
 
 // WAP to input a number from the user and print all the numbers until that number using loops
-let n5 = prompt("Enter a number");
+// let n5 = prompt("Enter a number");
 // 10
-let i=0
+// let i=0
 // while(i<=n5){
 //     console.log(i);
 //     i+=1;
@@ -488,5 +488,77 @@ let i=0
 //     console.log(i);
 //     i++;
 // }while(i<=n5)
+
+
+// Scope and window object
+// three ways to declare variables in js
+// let i = 20;
+// const j = 30;
+// var k = 40;
+
+// console.log(i, j, k);
+// i += 5 //let cab be reinitialized
+// j += 5 Uncaught TypeError: Assignment to constant variable.
+// k += 5 //var cab be reinitialized
+// console.log(i, j, k);
+
+
+//keyword based scoping
+//1.Let keyword - defined by the scope and cannot access the variable outside the scope
+// {
+//     let ak=10;
+//     console.log(ak);
+// }
+// console.log(ak);//Uncaught ReferenceError: ak is not defined
+//2.const keyword same as let when it comes to scoping
+// {
+//     const ak=10;
+//     console.log(ak);//Uncaught ReferenceError: ak is not defined
+// }
+// console.log(ak);
+// 3. var keyword - global variable, can be declared once and used everywhere
+// {
+//     var ak = 10;
+//     console.log(ak);//Uncaught ReferenceError: ak is not defined
+// }
+// console.log(ak);
+// leads to global variable pollution
+// var abc="abc"
+// var abc="cdf"
+// var abc=5
+// var abc=true
+// console.log(abc);
+// can't do this with let and const
+// let abc="abc"
+// let abc="cdf"
+// let abc=5
+// let abc=true
+// console.log(abc);
+// By default all the variables declared or initialised without any keyword is always considered var
+// bhuvan="bhuvan"
+// console.log(bhuvan);
+// Let' declarations can be declared.
+// let vfx;
+// console.log(vfx);
+// const' declarations must be initialized.
+// const xfs;
+// console.log(xfs);
+// using a variable before declaration
+
+
+//Hoisting in JS
+// console.log(gap); //ReferenceError: gap is not defined
+
+// let gap = 0 //Uncaught ReferenceError: Cannot access 'gap' before initialization
+// console.log(gap);
+
+//let and const keywords do not have access to window variables
+//only global varaibles have access to window object
+let abc="abc"
+const pi=3.142
+var ted="buddy"
+console.log(window.abc);
+console.log(window.pi);
+console.log(window.ted);
 
 
