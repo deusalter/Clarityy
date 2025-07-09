@@ -163,19 +163,84 @@
 // start - GEC - a2 - a1 - a2 - GEC - stop
 
 // function porgramming - A function call ing another function which can accept a funstion as a argument is called fucntional programming
-function twodigitOp(Operation,a,b){ //higher order function
-    return Operation(a,b);
-}
-function sum (x,y){ //function which is passed as a parameter 
-    return x+y;
-}
-function product (f,g){ // call back functions
-    return f*g;
-}
-function power(f, g) { //call back function
-    return f ** g;
-}
-console.log(twodigitOp(sum, 4, 3));
-console.log(twodigitOp(product, 4, 3));
-console.log(twodigitOp(power, 4, 3));
+// function twodigitOp(Operation,a,b){ //higher order function
+//     return Operation(a,b);
+// }
+// function sum (x,y){ //function which is passed as a parameter 
+//     return x+y;
+// }
+// function product (f,g){ // call back functions
+//     return f*g;
+// }
+// function power(f, g) { //call back function
+//     return f ** g;
+// }
+// console.log(twodigitOp(sum, 4, 3));
+// console.log(twodigitOp(product, 4, 3));
+// console.log(twodigitOp(power, 4, 3));
 
+// Closure - scope - chaining
+// Closure: the ability of a child function to access the members of a parent function without an external keywords
+
+// function xyz(){
+//     console.log("outter function");
+
+//     function lmn(){
+//         console.log("inner function");
+//     }
+// }
+// lmn(); // one simply cannot call an inner function without the parent function running
+//  this happens because of the lexical scope
+
+// function def(){ by default any function without a return keyword will always return undefined
+
+// }
+// console.log(def());
+
+// how to call a inner function - do return the inner function as a argument of the outer function
+// function xyz(){
+//     console.log("outter function");
+
+//     function lmn(){
+//         console.log("inner function");
+//     }
+//     return lmn
+// ;}
+// console.log(xyz()());
+
+// LEXICAL SCOPE
+// tha ability of JS engine to search 
+// for a variable in the outer scope when 
+// it is not avialable in the local scope 
+// is knows as scope chaining or lexical scope
+
+// let a = 5
+// function demo(){
+//     a++;
+//     console.log(a);
+// }
+// console.log(demo())
+
+//closure
+// function a(){
+//     let age=18;
+//     function addAge(){
+//         return ++age;
+//     }
+//     return addAge();
+// }
+// console.log(a())
+
+function counter(){
+    let count=0;
+    return function(){ return ++count }
+}
+debugger;
+let count1 = counter(); // function(){ return ++count }
+let count2 = counter(); // function(){ return ++count }
+console.log(count1()); //1
+console.log(count1()); 
+console.log(count1());
+console.log(count1());
+console.log(count1());
+console.log(count2());
