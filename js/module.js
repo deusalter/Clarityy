@@ -162,7 +162,8 @@
 // console.log("stop");
 // start - GEC - a2 - a1 - a2 - GEC - stop
 
-// function porgramming - A function call ing another function which can accept a funstion as a argument is called fucntional programming
+// function porgramming - A function calling another function which can 
+// accept a function as a argument is called functional programming
 // function twodigitOp(Operation,a,b){ //higher order function
 //     return Operation(a,b);
 // }
@@ -231,16 +232,17 @@
 // }
 // console.log(a())
 
-function counter(){
-    let count=0;
-    return function(){ return ++count }
-}
-debugger;
-let count1 = counter(); // function(){ return ++count }
-let count2 = counter(); // function(){ return ++count }
-console.log(count1()); //1
-console.log(count1()); 
-console.log(count1());
-console.log(count1());
-console.log(count1());
-console.log(count2());
+// function counter(){
+//     let count=0;
+//     return function(){ return ++count }
+// }
+// debugger;
+// let count1 = counter(); // function(){ return ++count }
+// let count2 = counter(); // function(){ return ++count }
+// console.log(count1()); //1
+// console.log(count1()); 
+// console.log(count1());
+// console.log(count1());
+// console.log(count1());
+// console.log(count2());
+
