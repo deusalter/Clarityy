@@ -463,3 +463,31 @@ for (const f of fruits.values()) {
 //size propery
 console.log(fruits.size);
 
+//Maps
+const player=new Map([["lawal","kamal"]]);
+console.log(player);
+
+//using set you can add new elements
+player.set('abhi',"nav");
+console.log(player);
+
+//has method 
+console.log(player.has("lawal"));
+
+// player.clear("lawal");
+// console.log(player);
+
+//values
+for (const f of player.values()) {
+    console.log(f);
+}
+
+//keys
+for (const f of player.keys()) {
+    console.log(f);
+}
+
+//enumerate
+player.forEach((key,value)=>{
+    console.log(`I am here ${key} and also here in ${value}`);
+})
