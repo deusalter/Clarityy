@@ -555,3 +555,31 @@
 // //how to destructure an object
 // let {cars}=emp1
 // console.log(cars);
+
+// loops in JS
+// for loop
+for ( let i=0;i<=5;i++){
+    console.log("*");
+}
+
+// to loop strings, objects,arrays we use for of loop
+//arrays
+var subjects=["maths","science","english"]
+for (let demo of subjects){
+    console.log(demo);
+}
+//strings
+let loca="bangalore"
+for ( let f of loca){
+    console.log(f);
+}
+//objects
+let emp={
+    eid:5,
+    enam:"suresh",
+    eplace:"bangalore"
+}
+// its not possible to iterate objects using for of loop
+for ( let k of emp){
+    console.log(k);
+}
