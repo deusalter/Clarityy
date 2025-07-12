@@ -429,3 +429,37 @@
 // d.reduce((acc,value)=>acc+value));
 //generate one single value based on the callback function we pass
 //original array is not modified
+
+// Set is a DS for storing unique elements
+let a=[3,3,4,7,8,9,1,3,4,56];
+let s=new Set(a);
+console.log(s);
+
+// how to create a new set
+// using new keyword
+
+//properties of a Set
+const fruits= new Set(['apple','mango']);
+fruits.add('banana');
+console.log(fruits);
+
+//to check if an element exists we have has method
+console.log(fruits.has('apple'));
+
+//delete
+fruits.delete("apple");
+console.log(fruits);
+
+//entries
+for( const f of fruits.entries()){
+    console.log(f);
+}
+
+//values
+for (const f of fruits.values()) {
+    console.log(f);
+}
+
+//size propery
+console.log(fruits.size);
+
