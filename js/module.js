@@ -246,3 +246,186 @@
 // console.log(count1());
 // console.log(count2());
 
+//Types of functions
+/*
+1. function definition
+2. function as a variable
+3. function as a parameter
+4. higher order and callback functions
+5. Arrow functions
+6. IIFE
+7. Anonymous Functions
+*/
+
+//1. function definition
+// function add(x, y) {
+//     return x + y
+// }
+// //2. function as a variable
+// let sum = function (x, y) { return x + y; }
+// console.log("function as a variable", sum(1,9));
+// //3. function as a parameter
+// //4. call back function
+// //5. Arrow function
+// let total = (x, y) => x + y
+// console.log("Arrow function", total(2,1));
+// // 6. Immediately invoked functions
+// console.log("IIFE",(function (x, y) { return x + y })(4, 3));
+// //(function definition)(function execution)
+// // 7. Anonymous functions - any function without any name
+// let sumtotal = (operation, x, y) => (operation(x, y))
+// console.log("Anonymous, callback and function as a parameter",sumtotal((a, b) => a + b, 4, 5));
+
+
+// //practice 
+// //WAP to print the n natural numbers using arrow function
+// let natnum=(upperlimit)=>{
+//     let i=0
+//     while(i<=upperlimit){
+//         console.log(i);
+//         i++;
+//     }
+//     return null;
+// }
+// console.log(natnum(22));
+
+//Arrays
+// An array is a block of memory that stores homogenous values
+// in JS Array is an object
+// how to create an array
+// 1. using array literal
+//syntax let arr=[value1,value2,......,valueN]
+// let arr = [10, 20, 30, 40, 50]
+// console.log(arr);
+// console.log(typeof arr);
+// //2. by creating an instance of Array
+// let arr2 = new Array(1,2,3,4,5);
+// console.log(arr2);
+
+// //how to access the elements in a array
+// console.log(arr2[0]);
+// console.log(arr2.length)
+
+
+//Array methods
+//1. pop - returns the element that is poped 
+// and original array is modified
+// let a = [20, 40, 60, 80, 100]
+// let popedArray = a.pop()
+// console.log(a);
+// console.log(popedArray);
+// // push adds the element at the end of the array 
+// // and it returns the length of the array
+// // original array is modified
+// let pushedArray = a.push(200)
+// console.log(a);
+// console.log(pushedArray);
+
+// //shift - removes the first element of the array
+// // and returns the Element
+// // original array is modified
+// let shiftedArray = a.shift();
+// console.log(a);
+// console.log(shiftedArray);
+
+// // unshift - adds new elements in the array 
+// // and returns the length of the array
+// // original array is modified
+// let unshifted = a.unshift(20, 30, 50);
+// console.log(a);
+// console.log(unshifted);
+
+// // indexOf()
+// // returns the position of an element in the array
+// // original array is not modified
+// let indexPosition = a.indexOf(40);
+// console.log(indexPosition);
+
+// //splice() - returns sub array from starting to last-1 positon
+// // original array is modifed
+// // three arguments 
+// // start, last-1 and elements to be added
+// // negative index is supported
+// let splicedArray = a.splice(0, 5, 100, 200);
+// console.log(a);
+// console.log(splicedArray);
+
+// //slice 
+// // does not modifed original array
+// // will always create a new array
+// // accepts negative indexs
+// console.log(a, "og array");
+// let slicedArray = a.slice(0, -2);
+// console.log(a, "og array");
+// console.log(slicedArray);
+
+
+// //joins
+// // does not modified original array 
+// // returns the string concatinaton of the entire array as a string
+// let c = [10, 30, 50, 70]
+// let d = [20, 40, 60, 80]
+// let e = c.join()
+// console.log(c, d, e);
+
+// //isArray
+// // return true or false based on the array
+// console.log(Array.isArray(d));
+
+// //forEach()
+// // return type is always undefined
+// let foreach = d.forEach((value, index) => { console.log(value, index); })
+// console.log(foreach);
+
+// //map function -> create a new array 
+// // performs map operation to each element in the array
+// // will not modify the original array but returns a new array
+// let mappedArray = d.map(x => x + 5);
+// console.log(mappedArray);
+// console.log(d);
+
+// //filter function -> used to set a filter condition and segregate data
+// // return a new array which satisfies the filter condition 
+// // but doesn't modified the original array
+// let filter = d.filter(x => {
+//     if (x >= 60)
+//         return x
+// })
+// console.log(filter);
+// console.log(d);
+
+
+// //.from()
+// function createArr(arraylike, mapFunc) {
+//     return Array.from(arraylike, mapFunc)
+// }
+
+// let arr1 = createArr("123456789", x => x * 2);
+// console.log(arr1);
+
+
+// //Array.of()
+// let genArr = Array.of("bhuvan", "abhinav");
+// console.log(genArr);
+
+// //Array.find()
+// console.log(d)
+// console.log(d.find(x => x >= 50));
+// console.log(d);
+
+// //Array.findIndex()
+// console.log(d.findIndex(x => x >= 50));
+
+// //Array.some()
+// console.log(d.some(x => x >= 70));
+// // returns true or false
+
+// // Array.every()
+// console.log(d.every(x => x >= 10));
+
+// //reduce method
+// console.log(d);
+// console.log(
+// d.reduce((acc,value)=>acc+value));
+//generate one single value based on the callback function we pass
+//original array is not modified
