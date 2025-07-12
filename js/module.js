@@ -431,63 +431,127 @@
 //original array is not modified
 
 // Set is a DS for storing unique elements
-let a=[3,3,4,7,8,9,1,3,4,56];
-let s=new Set(a);
-console.log(s);
+// let a=[3,3,4,7,8,9,1,3,4,56];
+// let s=new Set(a);
+// console.log(s);
 
-// how to create a new set
-// using new keyword
+// // how to create a new set
+// // using new keyword
 
-//properties of a Set
-const fruits= new Set(['apple','mango']);
-fruits.add('banana');
-console.log(fruits);
+// //properties of a Set
+// const fruits= new Set(['apple','mango']);
+// fruits.add('banana');
+// console.log(fruits);
 
-//to check if an element exists we have has method
-console.log(fruits.has('apple'));
+// //to check if an element exists we have has method
+// console.log(fruits.has('apple'));
 
-//delete
-fruits.delete("apple");
-console.log(fruits);
+// //delete
+// fruits.delete("apple");
+// console.log(fruits);
 
-//entries
-for( const f of fruits.entries()){
-    console.log(f);
-}
+// //entries
+// for( const f of fruits.entries()){
+//     console.log(f);
+// }
 
-//values
-for (const f of fruits.values()) {
-    console.log(f);
-}
+// //values
+// for (const f of fruits.values()) {
+//     console.log(f);
+// }
 
-//size propery
-console.log(fruits.size);
+// //size propery
+// console.log(fruits.size);
 
-//Maps
-const player=new Map([["lawal","kamal"]]);
-console.log(player);
-
-//using set you can add new elements
-player.set('abhi',"nav");
-console.log(player);
-
-//has method 
-console.log(player.has("lawal"));
-
-// player.clear("lawal");
+// //Maps
+// const player=new Map([["lawal","kamal"]]);
 // console.log(player);
 
-//values
-for (const f of player.values()) {
-    console.log(f);
-}
+// //using set you can add new elements
+// player.set('abhi',"nav");
+// console.log(player);
 
-//keys
-for (const f of player.keys()) {
-    console.log(f);
-}
+// //has method 
+// console.log(player.has("lawal"));
 
-//enumerate
-player.forEach((key,value)=>{
-    console.log(`I am here ${key} and also here in ${value}`);
-})
+// // player.clear("lawal");
+// // console.log(player);
+
+// //values
+// for (const f of player.values()) {
+//     console.log(f);
+// }
+
+// //keys
+// for (const f of player.keys()) {
+//     console.log(f);
+// }
+
+// //enumerate
+// player.forEach((key,value)=>{
+//     console.log(`I am here ${key} and also here in ${value}`);
+// })
+
+
+// Object
+// Any substance which has its exsistence in the real world is known as an Object.keys
+// Every object will have properties which describe them, every object will have action
+
+// Examples
+// Car 
+//     Properties 
+//     color, price, model 
+//     Actions
+//     drive, brake and moving
+// In programming 
+// actions as behaviours or function
+// properties are static values
+
+// In js objects are a collection of attributes and actions
+
+// every object has two parts 
+// keys and values
+
+// three ways you can create an object
+// 1. using object literals
+// 2. using a function
+// 3. using a class
+// let ob = { eid: "324", ename: "abhinav", sal: 500000 }
+// console.log(ob);
+// console.log(ob.eid);
+// console.log(ob.ename);
+
+// // trying to access an key which is not present will return undefined
+// console.log(ob.job);
+
+// // objects are mutuable in nature
+// ob.eid = "555"
+// console.log(ob);
+
+// // to delete specific keys we use delete keyword
+// delete ob.sal;
+// console.log(ob);
+
+// //notation in objects
+// //bracket notation
+// console.log(ob["ename"]);
+// //dot notation
+// console.log(ob.ename);
+
+
+// //nested objects
+// let emp1 = {
+//     ename: "ajay",
+//     eid: "123",
+//     salary: 160000,
+//     job: "Senior dev",
+//     details: { dn0: 123, city: "Boston" },
+//     cars:["model Y", "Model 3"]
+// }
+
+// emp1.cars.push("Camry")
+// console.log(emp1);
+
+// //how to destructure an object
+// let {cars}=emp1
+// console.log(cars);
