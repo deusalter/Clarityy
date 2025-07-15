@@ -583,3 +583,39 @@
 // for ( let k of emp){
 //     console.log(k);
 // }
+
+// different types of for loops
+// 1. normal for Loop
+/*  2. for of loop
+3. for in loop
+4. forEach
+*/
+
+// var subjects=["maths", "science","english","history"]
+// console.log("forEach method");
+// subjects.forEach(element=>{
+//     console.log(element);
+// })
+// console.log("for in loop");
+// for (let element in subjects){
+//     console.log(element);
+// }
+// console.log("for of loop");
+// for (let element of subjects) {
+//     console.log(element);
+// }
+
+// let abhinav={
+//     empid:115,
+//     place:"California",
+//     designation:"intern",
+//     techskills:["machine chipset design","python developer"]
+// }
+// for (let details in abhinav){
+//     console.log(abhinav[details]);
+// }
+// console.log("for of loop doesn't work with objects - it throws typerror");
+// // for (let details of abhinav) {
+// //     console.log(details);
+// // }
+
