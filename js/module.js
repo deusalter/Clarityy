@@ -619,3 +619,178 @@
 // //     console.log(details);
 // // }
 
+// Rest parameter and spread operator
+//rest parameter is used to accept multiple values as an array of elements
+// Generally converts multiple values into arrays
+// syntax: ...identifier
+
+// uses of a rest parameter:
+// 1. function definition and parameter list
+// 2. object destructring
+
+// How to use rest parameter in a function:
+// function test(...a){
+
+// }
+
+// rules of rest parameter
+// rest parameter should always be defined in the last of function 
+// correct below
+// function abc (b,...a){
+
+// }
+// //incorrect below
+// function abd (...a,b){
+
+// }
+
+// function sum(...a){
+//     return a.reduce((acc, v)=> acc+v,0)
+// }
+// console.log(sum(3,4,5))
+//Design a function which can accept multiple arguments and list them on the console.
+// function listArg(...arg){
+//     console.log(arg);
+//     console.log(arg.forEach(element => {
+//         console.log(element);
+//     }));
+// }
+// listArg(23,46,68,92,-35,67)
+
+// 2. how to destructure an object using rest parameter
+// let abhinav={
+//     empid:115,
+//     place:"California",
+//     designation:"intern",
+//     techskills:["machine chipset design","python developer"]
+// }
+// let {empid,...dump}=abhinav;
+// console.log(empid);
+// console.log(dump);
+//3. how to destructure arrays
+// let arr=[12,3,4,67,89,34,21]
+// let [a,b,...c]=arr
+// console.log(a);
+// console.log(b);
+// console.log(c);
+
+//4. how to clone an array
+// let [...cloneArr]=arr;
+
+// console.log(cloneArr);
+
+// uses of rest parameters
+// can be used in a function to store excess data
+// can be used to copy objects and arrays
+// destructure arrays and objects 
+
+// Spread Operator
+// spread operator is used to perform unpacking, spread operator uses an iterator to access each and every element in an array or any object
+// let arr = [12, 3, 4, 67, 89, 34, 21]
+// console.log(arr);
+// console.log(...arr);
+
+//cannot be used with objects
+// let abhinav={
+//     empid:115,
+//     place:"California",
+//     designation:"intern",
+//     techskills:["machine chipset design","python developer"]
+// }
+// console.log(abhinav);
+// console.log(...abhinav);// TYPE ERROR
+
+// let city="bangalore"
+// let arr=[...city]
+// let obj={...city}
+// console.log(city);
+// console.log(arr);
+// console.log(obj);
+
+// // special uses cases of spread operator
+// let a=[1,2,3]
+// let b=[4,5,6]
+// let ab=a.concat(b);
+// let c=[...a,...b]
+// console.log(ab);
+// console.log(c);
+
+// let abhinav={
+//     empid:115,
+//     place:"California",
+//     designation:"intern",
+//     techskills:["machine chipset design","python developer"]
+// }
+// let bhuvan={
+//     empid: 120,
+//     place: "Boston",
+//     designation: "SDE",
+//     techskills: ["VLSI chipset design", "JS developer"]
+// }
+
+// let emp={...abhinav,...bhuvan}
+// console.log(emp);
+
+// Object methods
+// A function which is a member of an object is called object method
+// A function defined inside an object is known as object method or method
+// Encapsulation:binding of state and behaviours of an object together is known as encapsulation
+
+// syntax: let obj={
+//     func: function (){
+//         return []
+//     }
+// }
+
+// example:
+let Car1 = {
+    color: "red",
+    price: 35000,
+    manufacturer: "toyota",
+    name: "camry",
+    accleration: "average",
+    driveEconomy: ((accleration) => { return "Fuel economy is the best in class!" })
+}
+
+let Car2 = {
+    color: "black",
+    price: 3500000,
+    manufacturer: "ferrari",
+    name: "f50",
+    accleration: "best",
+    driveEconomy: (accleration) => {
+        return "just drinks fuel to go very very quick and fast!"
+    }
+}
+
+console.log(Car1.color, Car1.price, Car1.manufacturer, Car1.name, Car1.accleration);
+console.log(Car1.driveEconomy("1G"));
+
+console.log(Car2.color, Car2.price, Car2.manufacturer, Car2.name, Car2.accleration);
+console.log(Car2.driveEconomy("5G"));
+
+
+const o3={
+    demo:()=>{
+        console.log(this); 
+        //here this will always refer to the global object or window object 
+        // it will not point to o3 object
+    }
+}
+o3.demo();
+
+
+const l3={
+    eid:15,
+    ename:"abhinav",
+    display: function () {
+        console.log(this.eid);
+    }
+}
+l3.display();
+
+// this keyword in an arrow function will always point to undefined
+// this keyword in a regular function will point to the window object
+// this keyword in a object method(not an arrow function) will always point to the object itself 
+// this keyword in a object method(arrow function) will always point to window object
+
