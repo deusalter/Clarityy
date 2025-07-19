@@ -803,19 +803,19 @@ syntax function identifier(parameter,.....){
 
 */
 
-function Student(sid,sname){
-    this.sid=sid
-    this.sname=sname
-}
+// function Student(sid,sname){
+//     this.sid=sid
+//     this.sname=sname
+// }
 
-console.log(Student);
-let s1=new Student(1,'abhinav');
-let s2=new Student(2,"bhuvan");
+// console.log(Student);
+// let s1=new Student(1,'abhinav');
+// let s2=new Student(2,"bhuvan");
 
-console.log(s1,s2);
-s1.toString(()=>{
-    console.log("you are accessing student data here");
-})
+// console.log(s1,s2);
+// s1.toString(()=>{
+//     console.log("you are accessing student data here");
+// })
 // // Uses of constructors
 // // 1. Freeze method
 // var obj1={
@@ -848,26 +848,26 @@ s1.toString(()=>{
 // console.log(Object.values(person));
 
 // console.log(Student);
-console.log(Array.prototype);
-let a = [1, 2, 3, 4, 5, 6, 7, 8]
-Array.prototype.filterrr = ((anyarray) => { console.log(anyarray.reverse()) });
-console.log(Array);
-let c=[2,4,6,8]
-a.filterrr(a);
-console.log(a);
-c.filterrr(c);
-console.log(c);
-console.log(Array.prototype);
-console.log(Object.prototype);
-console.log(s1.__proto__);
+// console.log(Array.prototype);
+// let a = [1, 2, 3, 4, 5, 6, 7, 8]
+// Array.prototype.filterrr = ((anyarray) => { console.log(anyarray.reverse()) });
+// console.log(Array);
+// let c=[2,4,6,8]
+// a.filterrr(a);
+// console.log(a);
+// c.filterrr(c);
+// console.log(c);
+// console.log(Array.prototype);
+// console.log(Object.prototype);
+// console.log(s1.__proto__);
 
-console.log(s1.constructor);
-console.log(s1.hasOwnProperty());
-console.log(s1.isPrototypeOf());
-console.log(s1.propertyIsEnumerable());
-console.log(s1.toLocaleString());
-console.log(s1.toString());
-console.log(s1.valueOf());
+// console.log(s1.constructor);
+// console.log(s1.hasOwnProperty());
+// console.log(s1.isPrototypeOf());
+// console.log(s1.propertyIsEnumerable());
+// console.log(s1.toLocaleString());
+// console.log(s1.toString());
+// console.log(s1.valueOf());
 
 // Prototype chaining 
 // E1->EMP->Object
@@ -875,18 +875,18 @@ console.log(s1.valueOf());
 // class hoisting is not possible in js
 // you can use a class only aftet its declared
 
-class Person{
-    constructor(name, id){
-        this.name=name
-        this.id=id
-    }
-    work(){
-        console.log("working!!!!");
-    }
-}
+// class Person{
+//     constructor(name, id){
+//         this.name=name
+//         this.id=id
+//     }
+//     work(){
+//         console.log("working!!!!");
+//     }
+// }
 
-p1=new Person("abhinav",125);
-p2=new Person("bhuvan",120)
+// p1=new Person("abhinav",125);
+// p2=new Person("bhuvan",120)
 
-console.log(p1);
-console.log(p1.work());
+// console.log(p1);
+// console.log(p1.work());
