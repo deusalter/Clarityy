@@ -743,54 +743,150 @@
 // }
 
 // example:
-let Car1 = {
-    color: "red",
-    price: 35000,
-    manufacturer: "toyota",
-    name: "camry",
-    accleration: "average",
-    driveEconomy: ((accleration) => { return "Fuel economy is the best in class!" })
-}
+// let Car1 = {
+//     color: "red",
+//     price: 35000,
+//     manufacturer: "toyota",
+//     name: "camry",
+//     accleration: "average",
+//     driveEconomy: ((accleration) => { return "Fuel economy is the best in class!" })
+// }
 
-let Car2 = {
-    color: "black",
-    price: 3500000,
-    manufacturer: "ferrari",
-    name: "f50",
-    accleration: "best",
-    driveEconomy: (accleration) => {
-        return "just drinks fuel to go very very quick and fast!"
-    }
-}
+// let Car2 = {
+//     color: "black",
+//     price: 3500000,
+//     manufacturer: "ferrari",
+//     name: "f50",
+//     accleration: "best",
+//     driveEconomy: (accleration) => {
+//         return "just drinks fuel to go very very quick and fast!"
+//     }
+// }
 
-console.log(Car1.color, Car1.price, Car1.manufacturer, Car1.name, Car1.accleration);
-console.log(Car1.driveEconomy("1G"));
+// console.log(Car1.color, Car1.price, Car1.manufacturer, Car1.name, Car1.accleration);
+// console.log(Car1.driveEconomy("1G"));
 
-console.log(Car2.color, Car2.price, Car2.manufacturer, Car2.name, Car2.accleration);
-console.log(Car2.driveEconomy("5G"));
-
-
-const o3={
-    demo:()=>{
-        console.log(this); 
-        //here this will always refer to the global object or window object 
-        // it will not point to o3 object
-    }
-}
-o3.demo();
+// console.log(Car2.color, Car2.price, Car2.manufacturer, Car2.name, Car2.accleration);
+// console.log(Car2.driveEconomy("5G"));
 
 
-const l3={
-    eid:15,
-    ename:"abhinav",
-    display: function () {
-        console.log(this.eid);
-    }
-}
-l3.display();
+// const o3={
+//     demo:()=>{
+//         console.log(this); 
+//         //here this will always refer to the global object or window object 
+//         // it will not point to o3 object
+//     }
+// }
+// o3.demo();
+
+
+// const l3={
+//     eid:15,
+//     ename:"abhinav",
+//     display: function () {
+//         console.log(this.eid);
+//     }
+// }
+// l3.display();
 
 // this keyword in an arrow function will always point to undefined
 // this keyword in a regular function will point to the window object
 // this keyword in a object method(not an arrow function) will always point to the object itself 
 // this keyword in a object method(arrow function) will always point to window object
 
+// Constructor function
+// A function which is used to create an object is known as constructor function
+/*
+syntax function identifier(parameter,.....){
+    }
+
+
+*/
+
+function Student(sid,sname){
+    this.sid=sid
+    this.sname=sname
+}
+
+console.log(Student);
+let s1=new Student(1,'abhinav');
+let s2=new Student(2,"bhuvan");
+
+console.log(s1,s2);
+s1.toString(()=>{
+    console.log("you are accessing student data here");
+})
+// // Uses of constructors
+// // 1. Freeze method
+// var obj1={
+//     empName:"Ajay",
+//     age:20,
+//     place:"New Hamshire"
+// }
+// console.log(Object.freeze(obj1));
+// obj1.age=25
+// obj1.place="boston"
+// console.log(obj1);
+// // 2. Assign method
+// var target={a:2,b:4,c:5,d:9}
+// var source={a:1,b:67,c:45}
+// console.log(Object.assign(target,source));
+// // 3, entries method
+// var person={
+//     fname:"bhuvan",
+//     lname:"raj",
+//     age:27,
+//     1:"to check"
+// }
+// var kv=Object.entries(person)
+// console.log(kv);
+// console.log(kv[3]);
+// console.log(kv[3][1]);
+// //4. keys
+// console.log(Object.keys(person));
+// // 5.values
+// console.log(Object.values(person));
+
+// console.log(Student);
+console.log(Array.prototype);
+let a = [1, 2, 3, 4, 5, 6, 7, 8]
+Array.prototype.filterrr = ((anyarray) => { console.log(anyarray.reverse()) });
+console.log(Array);
+let c=[2,4,6,8]
+a.filterrr(a);
+console.log(a);
+c.filterrr(c);
+console.log(c);
+console.log(Array.prototype);
+console.log(Object.prototype);
+console.log(s1.__proto__);
+
+console.log(s1.constructor);
+console.log(s1.hasOwnProperty());
+console.log(s1.isPrototypeOf());
+console.log(s1.propertyIsEnumerable());
+console.log(s1.toLocaleString());
+console.log(s1.toString());
+console.log(s1.valueOf());
+
+// Prototype chaining 
+// E1->EMP->Object
+
+// class hoisting is not possible in js
+// you can use a class only aftet its declared
+
+class Person{
+    constructor(name, id){
+        this.name=name
+        this.id=id
+    }
+    work(){
+        console.log("working!!!!");
+    }
+}
+
+p1=new Person("abhinav",125);
+p2=new Person("bhuvan",120)
+
+console.log(p1);
+console.log(p1.work());
