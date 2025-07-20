@@ -914,64 +914,64 @@ If you do not have a constructor method, JS will add an inviisble empty construc
 
 */
 
-class Car {
-    constructor(brand) {
-        this.brand = brand
-    }
-    present() {
-        return "I have a " + this.brand;
-    }
-}
-var myCar = new Car("ford"); //creation an object name myCar based on the Class Car
-console.log(myCar.brand);
-console.log(myCar.present());
+// class Car {
+//     constructor(brand) {
+//         this.brand = brand
+//     }
+//     present() {
+//         return "I have a " + this.brand;
+//     }
+// }
+// var myCar = new Car("ford"); //creation an object name myCar based on the Class Car
+// console.log(myCar.brand);
+// console.log(myCar.present());
 
-/*
-This keyword refers to the object it belongs to.
-It has different values based on where it is used at
-In a method, this refers to the owner object
+// /*
+// This keyword refers to the object it belongs to.
+// It has different values based on where it is used at
+// In a method, this refers to the owner object
 
-static method: is a method that gets called before a class in initialized
+// static method: is a method that gets called before a class in initialized
 
-*/
-class Readme {
-    constructor(book) {
-        this.book = book
-    }
-    static hello() {
-        return "hello!!"
-    }
+// */
+// class Readme {
+//     constructor(book) {
+//         this.book = book
+//     }
+//     static hello() {
+//         return "hello!!"
+//     }
 
-}
-var mc = new Readme("Art of War");
-console.log(Readme.hello()); // key difference with static keyword
+// }
+// var mc = new Readme("Art of War");
+// console.log(Readme.hello()); // key difference with static keyword
 
 
-// inheritance
-class Person{
-    constructor(name,age,gender){
-        this.name=name;
-        this.age=age;
-        this.gender=gender;
-    }
-    exist(){
-        return "true this person exists in the records!"
-    }
-}
+// // inheritance
+// class Person{
+//     constructor(name,age,gender){
+//         this.name=name;
+//         this.age=age;
+//         this.gender=gender;
+//     }
+//     exist(){
+//         return "true this person exists in the records!"
+//     }
+// }
 
-class Student extends Person{
-    constructor(sid, name, age, gender){
-        super(name,age,gender);
-        this.sid=sid;
-        // super.name=name;
-        // super.age=age;
-        // super.gender=gender;
-    }
-    exist(){
-        return "true this student exists in the school!"
-    }
-}
+// class Student extends Person{
+//     constructor(sid, name, age, gender){
+//         super(name,age,gender);
+//         this.sid=sid;
+//         // super.name=name;
+//         // super.age=age;
+//         // super.gender=gender;
+//     }
+//     exist(){
+//         return "true this student exists in the school!"
+//     }
+// }
 
-let s1=new Student(125,"abhinav",20,"male");
-console.log(s1);
-console.log(s1.exist());
+// let s1=new Student(125,"abhinav",20,"male");
+// console.log(s1);
+// console.log(s1.exist());
