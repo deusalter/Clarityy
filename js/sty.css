@@ -1,0 +1,9 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.changeWidth{
+    width:80px;
+    margin:20px;
+}
