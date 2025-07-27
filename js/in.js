@@ -171,3 +171,85 @@ this function is built into window object
 // console.log(print(0, 10, successMessage));
 // console.log("ends here");
 
+// promise
+/*
+Promise is an object 
+Promise object keeps an eye on asynchronous tasks
+pending - resolved - rejected
+Promise has three states 
+pending - you are waiting for some action to be completed
+resolved - you have completed the task
+rejected - you completed but wrong output
+two parts
+then - catch 
+then (cb) - the cb func inside then block will execute only when
+the promise state is changed to resolved
+catch (cb) - the cb func inside catch block will execute only when 
+the promise state is changed to rejected
+
+
+syntax
+new promise((resolve, reject)=>{
+    })
+
+steps to design asynchronous fuction
+
+s1: create a function that returns a promise
+s2: pass a AsyncCallBackfunc with 2 params resolve n reject
+s3: write the cbfunc for resolve and reject
+
+*/
+
+// function print(m, n) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (isNaN(m) || isNaN(n)) {
+//                 return reject();
+//             }
+//             for (let i = m; i <= n; i++) {
+//                 console.log(i);
+//             }
+//             return resolve();
+//         }, 2000);
+//     })
+// }
+// function successMessage() {
+//     console.log("all the code is executed");
+// }
+
+// console.log("start here");
+// console.log(new Promise((res,rej)=>{}));
+// console.log(new Promise((res, rej) => { res()}));
+// console.log(new Promise((res, rej) => { rej() }));
+
+
+// print(0, 10)
+//     .then(successMessage)
+//     .catch(() => {
+//         console.log("some error occured");
+//     })
+
+// keywords - async and await 
+/*
+before function definition we use async
+await is used before we call the promise
+*/
+function even(m, n) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (isNaN(m) || isNaN(n)) {
+                return reject();
+            }
+            for (let i = m; i <= n; i++) {
+                console.log(i);
+            }
+        }, 2000)
+    })
+}
+async function start() {
+    console.log("start");
+    await even(2,10);
+    console.log("success");
+}
+start();
+console.log("end");
