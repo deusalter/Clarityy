@@ -120,4 +120,54 @@
 // })
 
 
+// Asynchornous nature of JS
+// Priority based structure 
+// The behaviour of making way for others is known as Asynchornous nature
+/*
+
+function f1(){
+}//10mins
+
+function f2(){
+}
+with the the task we add some priority
+
+setTimeout(()=>{
+
+    },time in ms)
+
+this function is built into window object
+- we cannot predict when the task will be complete
+- if we have any dependency on the previous function it will get hard to create 
+*/
+
+// function print(m,n){
+//     setTimeout(()=>{
+//         for (let i=m; i<=n;i++){
+//             console.log(i);
+//         }
+//     },2000)
+// }
+// function successMessage(){
+//     console.log("all the code is executed");
+// }
+// print(0,10)
+// successMessage()
+
+// function print(m, n, cb) {
+//     setTimeout(() => {
+//         for (let i = m; i <= n; i++) 
+//         console.log(i);
+//         if(cb!==undefined){
+//             cb();
+//         }
+//     }, 2000);
+// }
+// function successMessage(){
+//     console.log("all the code is executed");
+// }
+
+// console.log("start here");
+// console.log(print(0, 10, successMessage));
+// console.log("ends here");
 
